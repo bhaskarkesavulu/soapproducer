@@ -1,1 +1,22 @@
 
+Steps to create Producer:-
+
+1. First go to https://start.spring.io/ select 
+    Project : Maven Project
+    Language : Java
+    SB Version : Your choice
+    Dependencies : Web Services, Spring Boot, WSDL, group ID, Artifact ID, Version, Package and Generate project.
+2. Just import generated project in your favourate IDE.
+3. pom file and add JAXB to generate java objects from xsd file.
+4. Now place xsd file under /src/main/resources --> employeeinformation.xsd
+5. Now just go to project right click Maven update if any errors after that right click on project and Run As Maven Install. Now the java files are created.
+6. Now all you need Configuration, Endpoint, Service
+7. After completing code start the project and see it needs to run http://localhost:2022/ws/employeeinformation.wsdl 
+8. Producer Ready.
+9. testing you can see SOAP UI or Postman or Thunder Client.
+
+This producer application created based on the contract-first approach. Which is first create XSD file from there we can create JAVA objects. 
+Using this we can create web service endpoint. Also during maven process XSD will be loaded and converted into WSDL file. 
+Later this WSDL file will be used for soapconsumer application to connect the producer application.
+
+To test go to Soap Employee Consumer to check further.
